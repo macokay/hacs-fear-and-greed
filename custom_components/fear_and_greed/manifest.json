@@ -1,0 +1,12 @@
+{
+  "domain": "fear_and_greed",
+  "name": "Fear and Greed Index",
+  "version": "1.0.0",
+  "documentation": "https://github.com/macokay/hacs-fear-and-greed",
+  "issue_tracker": "https://github.com/macokay/hacs-fear-and-greed/issues",
+  "dependencies": [],
+  "codeowners": ["@macokay"],
+  "requirements": [],
+  "iot_class": "cloud_polling",
+  "config_flow": true
+}
