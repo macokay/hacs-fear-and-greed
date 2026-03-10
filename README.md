@@ -48,4 +48,7 @@ Data is fetched from the free [alternative.me FNG API](https://api.alternative.m
 
 ## License
 
-MIT
+© 2026 Mac O Kay
+Free to use and modify for personal, non-commercial use.
+Credit appreciated if you share or build upon this work.
+Commercial use is not permitted.

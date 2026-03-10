@@ -1,0 +1,13 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Fear and Greed Index",
+        "description": "Opsæt Crypto Fear and Greed Index-integrationen. Ingen API-nøgle påkrævet."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Allerede konfigureret. Kun én instans understøttes."
+    }
+  }
+}

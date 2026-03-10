@@ -1,0 +1,13 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Fear and Greed Index",
+        "description": "Set up the Crypto Fear and Greed Index integration. No API key required."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Already configured. Only one instance is supported."
+    }
+  }
+}
