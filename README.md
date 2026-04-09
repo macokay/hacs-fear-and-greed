@@ -1,54 +1,113 @@
-# Fear and Greed Index — Home Assistant Integration
+<p align="center">
+  <img src="custom_components/fear_and_greed/brand/icon.png" alt="Fear and Greed Index" width="120" />
+</p>
 
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
+<h1 align="center">Fear and Greed Index</h1>
 
-Custom integration for Home Assistant that pulls the [Crypto Fear and Greed Index](https://alternative.me/crypto/fear-and-greed-index/) from alternative.me and exposes it as two sensors.
+<p align="center">
+  Crypto Fear &amp; Greed Index from alternative.me as two Home Assistant sensors — numeric value and text classification, updated every 30 minutes.
+</p>
+
+<p align="center">
+  <a href="https://github.com/hacs/integration">
+    <img src="https://img.shields.io/badge/HACS-Custom-orange.svg" alt="HACS Custom" />
+  </a>
+  <a href="https://github.com/macokay/hacs-fear-and-greed/releases">
+    <img src="https://img.shields.io/github/v/release/macokay/hacs-fear-and-greed" alt="GitHub release" />
+  </a>
+  <a href="https://github.com/macokay/hacs-fear-and-greed/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-Non--Commercial-blue.svg" alt="License" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://www.buymeacoffee.com/macokay">
+    <img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-%23FFDD00.svg?logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee" />
+  </a>
+</p>
 
 ---
 
-## Sensors
+## Features
 
-| Entity | Type | Description |
-|--------|------|-------------|
-| `sensor.fear_and_greed_index` | `int` (0–100) | Numeric index value |
-| `sensor.fear_and_greed_classification` | `string` | Text label: Extreme Fear / Fear / Neutral / Greed / Extreme Greed |
-
-Both sensors share a single API call and update every 30 minutes.
+- Numeric index sensor (0–100)
+- Text classification sensor (Extreme Fear / Fear / Neutral / Greed / Extreme Greed)
+- Single API call shared between both sensors
+- No API key required
+- GUI setup — no YAML needed
 
 ---
 
-## Installation via HACS
+## Requirements
 
-1. In Home Assistant, go to **HACS → Integrations → ⋮ → Custom repositories**
-2. Add `https://github.com/macokay/hacs-fear-and-greed` as category **Integration**
-3. Find **Fear and Greed Index** in HACS and click **Download**
-4. Restart Home Assistant
+| Requirement | Version / Details |
+|---|---|
+| Home Assistant | 2023.1 or newer |
+| alternative.me FNG API | Free, no API key required |
 
-### Manual installation
+---
 
-Copy the `custom_components/fear_and_greed` folder into your `config/custom_components/` directory and restart.
+## Installation
+
+### Automatic — via HACS
+
+1. Open **HACS** in Home Assistant.
+2. Go to **Integrations** → three-dot menu (⋮) → **Custom repositories**.
+3. Add `https://github.com/macokay/hacs-fear-and-greed` as **Integration**.
+4. Search for **Fear and Greed Index** and click **Download**.
+5. Restart Home Assistant.
+
+### Manual
+
+1. Download the latest release from [GitHub Releases](https://github.com/macokay/hacs-fear-and-greed/releases).
+2. Copy the `custom_components/fear_and_greed` folder to your `config/custom_components/` directory.
+3. Restart Home Assistant.
 
 ---
 
 ## Configuration
 
-No YAML required. After installation:
-
-1. Go to **Settings → Devices & Services → Add Integration**
-2. Search for **Fear and Greed Index**
-3. Click **Submit** — that's it
+1. Go to **Settings → Devices & Services → Add Integration**.
+2. Search for **Fear and Greed Index**.
+3. Click **Submit** — no further input required.
 
 ---
 
-## Data source
+## Data
 
-Data is fetched from the free [alternative.me FNG API](https://api.alternative.me/fng/) — no API key required.
+### Entities
+
+| Entity | Type | Description |
+|---|---|---|
+| `sensor.fear_and_greed_index` | `int` | Numeric index value (0–100) |
+| `sensor.fear_and_greed_classification` | `string` | Extreme Fear / Fear / Neutral / Greed / Extreme Greed |
+
+### Update interval
+
+Data is fetched every 30 minutes.
+
+---
+
+## Updating
+
+**Via HACS:** HACS will notify you when an update is available. Click **Update** on the integration card.
+
+**Manual:** Replace the `custom_components/fear_and_greed` folder with the new version and restart Home Assistant.
+
+---
+
+## Known Limitations
+
+- Data is sourced from the [alternative.me FNG API](https://api.alternative.me/fng/) — availability depends on the upstream service
+
+---
+
+## Credits
+
+- [alternative.me](https://alternative.me/crypto/fear-and-greed-index/) — Crypto Fear and Greed Index data
 
 ---
 
 ## License
 
-© 2026 Mac O Kay
-Free to use and modify for personal, non-commercial use.
-Credit appreciated if you share or build upon this work.
-Commercial use is not permitted.
+&copy; 2026 Mac O Kay. Free to use and modify for personal, non-commercial use. Attribution appreciated if you share or build upon this work. Commercial use is not permitted.
