@@ -1,7 +1,9 @@
 {
   "domain": "fear_and_greed",
   "name": "Fear and Greed Index",
-  "codeowners": ["@macokay"],
+  "codeowners": [
+    "@macokay"
+  ],
   "config_flow": true,
   "dependencies": [],
   "documentation": "https://github.com/macokay/hacs-fear-and-greed",
