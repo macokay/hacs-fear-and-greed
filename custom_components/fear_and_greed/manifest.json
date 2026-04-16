@@ -1,12 +1,12 @@
 {
   "domain": "fear_and_greed",
   "name": "Fear and Greed Index",
-  "version": "1.0.2",
-  "documentation": "https://github.com/macokay/hacs-fear-and-greed",
-  "issue_tracker": "https://github.com/macokay/hacs-fear-and-greed/issues",
-  "dependencies": [],
   "codeowners": ["@macokay"],
-  "requirements": [],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/macokay/hacs-fear-and-greed",
   "iot_class": "cloud_polling",
-  "config_flow": true
+  "issue_tracker": "https://github.com/macokay/hacs-fear-and-greed/issues",
+  "requirements": [],
+  "version": "1.0.3"
 }
