@@ -10,7 +10,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, CoordinatorEntity
 
-from .const import API_URL, DOMAIN, SCAN_INTERVAL_MINUTES
+from .const import API_URL, SCAN_INTERVAL_MINUTES
 
 _LOGGER = logging.getLogger(__name__)
 SCAN_INTERVAL = timedelta(minutes=SCAN_INTERVAL_MINUTES)
