@@ -5,8 +5,9 @@
   "config_flow": true,
   "dependencies": [],
   "documentation": "https://github.com/macokay/hacs-fear-and-greed",
+  "integration_type": "service",
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/macokay/hacs-fear-and-greed/issues",
   "requirements": [],
-  "version": "1.0.3"
+  "version": "1.0.4"
 }

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ryg-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="50%" stop-color="#FDE047" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <rect x="32" y="32" width="448" height="448" rx="100" ry="100" fill="url(#bg-grad)" stroke="#334155" stroke-width="4" filter="url(#shadow)" />
+
+  <path d="M 106 350 A 170 170 0 1 1 406 350" fill="none" stroke="#1E293B" stroke-width="36" stroke-linecap="round" />
+  <path d="M 106 350 A 170 170 0 1 1 406 350" fill="none" stroke="url(#ryg-grad)" stroke-width="36" stroke-linecap="round" filter="url(#shadow)" />
+
+  <path d="M 141 330 A 130 130 0 1 1 371 330" fill="none" stroke="#475569" stroke-width="4" stroke-dasharray="8 20" />
+
+  <circle cx="256" cy="270" r="30" fill="#334155" stroke="#94A3B8" stroke-width="6" filter="url(#shadow)" />
+  
+  <g transform="rotate(45 256 270)">
+    <polygon points="246,270 266,270 256,120" fill="#F8FAFC" filter="url(#shadow)" />
+  </g>
+  <circle cx="256" cy="270" r="12" fill="#E2E8F0" />
+  
+  <text x="256" y="415" text-anchor="middle" font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="76" font-weight="900" fill="#10B981" filter="url(#shadow)">74</text>
+  <text x="256" y="445" text-anchor="middle" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="800" fill="#94A3B8" letter-spacing="4">GREED</text>
+</svg>
