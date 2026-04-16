@@ -1,4 +1,5 @@
 """Config flow for Fear and Greed Index."""
+
 import voluptuous as vol
 from homeassistant import config_entries
 from .const import DOMAIN

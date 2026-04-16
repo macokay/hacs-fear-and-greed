@@ -1,4 +1,5 @@
 """Fear and Greed Index sensors."""
+
 import logging
 from datetime import timedelta
 
@@ -8,7 +9,10 @@ from homeassistant.components.sensor import SensorEntity
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
-from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, CoordinatorEntity
+from homeassistant.helpers.update_coordinator import (
+    DataUpdateCoordinator,
+    CoordinatorEntity,
+)
 
 from .const import API_URL, SCAN_INTERVAL_MINUTES
 
@@ -25,10 +29,12 @@ async def async_setup_entry(
     coordinator = FearAndGreedCoordinator(hass)
     await coordinator.async_config_entry_first_refresh()
 
-    async_add_entities([
-        FearAndGreedValueSensor(coordinator),
-        FearAndGreedClassificationSensor(coordinator),
-    ])
+    async_add_entities(
+        [
+            FearAndGreedValueSensor(coordinator),
+            FearAndGreedClassificationSensor(coordinator),
+        ]
+    )
 
 
 class FearAndGreedCoordinator(DataUpdateCoordinator):
