@@ -4,14 +4,13 @@ import logging
 from datetime import timedelta
 
 import aiohttp
-
 from homeassistant.components.sensor import SensorEntity
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import (
-    DataUpdateCoordinator,
     CoordinatorEntity,
+    DataUpdateCoordinator,
 )
 
 from .const import API_URL, SCAN_INTERVAL_MINUTES
@@ -50,11 +49,13 @@ class FearAndGreedCoordinator(DataUpdateCoordinator):
 
     async def _async_update_data(self):
         """Fetch latest data from alternative.me."""
-        async with aiohttp.ClientSession() as session:
-            async with session.get(API_URL) as response:
-                response.raise_for_status()
-                data = await response.json(content_type=None)
-                return data["data"][0]
+        async with (
+            aiohttp.ClientSession() as session,
+            session.get(API_URL) as response,
+        ):
+            response.raise_for_status()
+            data = await response.json(content_type=None)
+            return data["data"][0]
 
 
 class FearAndGreedValueSensor(CoordinatorEntity, SensorEntity):
